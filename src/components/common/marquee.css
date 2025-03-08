@@ -1,0 +1,27 @@
+/* In your global CSS file (styles.css or equivalent) */
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Apply the marquee animation */
+  .marquee-animation {
+    animation: marquee 10s linear infinite;
+  }
+  
+  /* Disable animation for larger screens */
+  .no-animation {
+    animation: none;
+  }
+  
+  /* Optional: You can add this media query to explicitly disable animation above a certain breakpoint */
+  @media (min-width: 640px) {
+    .marquee-animation {
+      animation: none;
+    }
+  }
+  
